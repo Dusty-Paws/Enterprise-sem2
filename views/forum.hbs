@@ -1,0 +1,58 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Forum Page</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body id="top">
+		<header>
+			<h1>Forum</h1>
+			{{#if authorised}}
+				<a href="/logout">Log out</a>
+			{{else}}
+				<a href="/login">Log in</a>
+			{{/if}}
+                <a href="/home">Home</a>
+                <a href="/adoption">Adoption</a>
+				<a href="/store">Store</a>
+				<a href="/aboutUs">About Us </a>
+				<a href="/customerProfile">Your Profile </a>
+				
+		</header>
+	<main>
+		
+
+
+		{{!-- {{#if authorised}}
+			<p><a href="/foo">Foo Bar</a></p>
+		{{/if}} --}}
+	</main>
+
+	<footer>
+        <label>Company</label>
+		<ol>
+		    <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/blog">Blog</a></li>
+		</ol>
+
+        <label>Menu</label>
+		<ol>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/adoption">Adoption</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/forum">Forum</a></li>
+            <li><a href="/aboutUs">About Us </a></li>
+        </ol> 
+	   <a href = "#top">Back to the top</a>  
+
+	   <p>@Copyright 2021 - Group 1A</p>   
+	</footer>
+	
+	</body>
+</html>

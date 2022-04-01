@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+		<title>Pet Details Page</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<!--<link href="css/styleDetails.css" type="text/css" rel="stylesheet" />-->
+		<link href="/css/styleDetails.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body id="top">
+
+		<header>
+			<h1>Adoption</h1>
+			<ul>
+			<li><button>About You</button>
+			<ul>
+				<li><a href="/customerProfile">Your Profile </a></li>
+				<li><a href="/aboutUs">About Us </a> </li>
+				<li>
+				<strong>
+				{{#if authorised}}
+						<a href="/logout">Log out</a>
+				{{else}}
+						<a href="/login">Log in</a>
+				{{/if}}
+				</strong>
+					</li>
+				</ul>
+			</li>
+		</ul>
+				<a href="/home">Home</a>
+				<a href="/blog">Community</a>
+				<a href="/store">Store</a>
+				<a href="/adoption">Adoption</a>
+				<a href="/Search">Search</a>
+		</header>
+
+	<main>
+    {{#each details}}
+        
+      <figure>
+            <img src="/{{Pet_Pic}}"> <h3>{{Pet_Name}}</h3> </br>
+      <fieldset>
+      <label>{{Breed}}</label><label>{{Status_Pet}}</label><label>{{Species}}</label><label>{{Age}}</label>
+      </fieldset>
+    
+        
+      <p>
+
+
+        </br>(Pet Description)
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </br>-Owner ID: {{ Owner_ID}}
+        </br>(Pet Description)
+      </p>
+
+      
+      <!-- add inline references to age and fee -->
+			<!--Change the link to what the route id would be -->
+			<!--<a href="/article_details/{{id}}">For More Details</a>  -->
+			
+			
+        </figure>
+        
+
+        {{/each}}
+
+
+{{#if bundles}}
+    <h1>Special Bundle Value!</h1>
+<!-- Dorna bundles -->
+	{{#each bundles}}
+				<figure>
+          <article2>
+            <h1>{{Item_Name}}</h1>
+            <p><s style="color:red;">{{Item_Price}}</s></p>
+            
+				  	
+            
+          </article2>
+        </figure>
+	{{/each}}
+  <h1 >Bundle price: <s style="color:red;">  £57.00</s>    £{{bundle_price}}</h1><p>
+{{/if}}
+  </br>
+  </br>
+  </br>
+  </br>
+  <h1> Closest pick up location!</h1>
+  <img src="/dusty paw map.png">  
+		<p>
+		<!--<input type="submit" value="Reserve Your Pet Now"> -->
+		</p>
+		</form>
+
+		<!-- Dorna Testing emails subject to change--> 
+		<form action="https://formsubmit.co/dustypawscoventry@gmail.com" method="POST">
+
+     <input type="email" name="email" placeholder= "Enter your email..." required>
+		 <input type="hidden" name="_next" value="https://beatlescanvas-motornylon-8080.codio-box.uk" method="POST">
+		 <input type="hidden" name="_autoresponse" value="Thank you for your reservation, the owner has been notified">
+
+     <input type="submit" value="Reserve Your Pet Now">
+		</form>
+		
+
+		{{!-- enctype="multipart/form-data"> --}}
+
+		<!-- <input id="hidden" type="text" name="name" placeholder= "I would like to reserve Apollo!" required> -->
+		{{!-- {{#if authorised}}
+			<p><a href="/foo">Foo Bar</a></p>
+		{{/if}} --}}
+	</main>
+	
+	<footer>
+        <label>Menu</label>
+		<ol>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/adoption">Adoption</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/aboutUs">About Us </a></li>
+			<li><a href="/contact">Contact Us</a></li>
+        </ol>
+	   <a href = "#top">Back to the top</a>  
+
+	   <p>@Copyright 2021 - Group 1A</p>   
+	</footer>
+
+	</body>
+</html>

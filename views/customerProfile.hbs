@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dusty Paws</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="css/styleProfile.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+    <header>
+			<h1>Your Profile</h1>
+			<ul>
+			<li><button>About You</button>
+			<ul>
+				<li><a href="/customerProfile">Your Profile </a></li>
+				<li><a href="/aboutUs">About Us </a> </li>
+				<li>
+				<strong>
+				{{#if authorised}}
+						<a href="/logout">Log out</a>
+				{{else}}
+						<a href="/login">Log in</a>
+				{{/if}}
+				</strong>
+					</li>
+				</ul>
+			</li>
+		</ul>
+				<a href="/home">Home</a>
+				<a href="/blog">Community</a>
+				<a href="/store">Store</a>
+				<a href="/adoption">Adoption</a>
+				<a href="/Search">Search</a>
+		</header>
+	<body>
+		<main>
+			
+			 <!--<img src= "img_profile.png" class = "profile" width= "200" height= "200" alt="Pick your new friend"> 
+			<h5> Welcome back {{authorised}}</h5> -->
+		
+    <figure class = "updateform"> 
+      <form action="/customerProfile" method="post"> 
+		<h2>Update your profile</h2>
+    	<p>
+				<label for="User_Name">Name:</label><br />
+				<input type="text" name="User_Name" placeholder="Change your username" required>
+			</p>
+			<p>
+				<label for="User_Email">Email:</label><br />
+				<input type="text" name="User_Email" placeholder="Add your email" required>
+			</p>
+			<p>
+				<label for="User_Postcode">Postcode:</label><br />
+        <input type="text" name="User_Postcode" placeholder="Example: CV1 2JH" required>
+
+
+			<p><input type="submit" value="Update"></p>
+		</form>
+
+    </figure>
+
+    <!--<figure class = "History">
+			<h1> Adoption History <h1>
+    </figure class = "History">-->
+		
+		<figure class = "History">
+			{{#each adopted}}
+        <h1>Your Adoptions:</h1>
+				<figure class = "History2">
+					<img src={{Pet_Pic}}>
+							<figcaption>
+							<h3>{{Pet_Name}}</h3> 
+							<h4>{{Species}}</h4>
+							<h4>{{Breed}}</h4> 
+							<h4>{{Sex}}</h4> 
+							<h4>{{Age}}</h4>
+							</figcaption>
+  
+						</figure>
+						<a href="/blog" class="button">Post about {{Pet_Name}}</a>
+        {{/each}}
+		</figure>
+
+
+
+
+		</main>
+	<footer>
+        <label>Menu</label>
+		<ol>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/adoption">Adoption</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/aboutUs">About Us </a></li>
+			<li><a href="/contact">Contact Us</a></li>
+        </ol>
+	   <a href = "#top">Back to the top</a>  
+
+	   <p>@Copyright 2021 - Dusty Paws</p>   
+	</footer>
+
+	</body>
+</html>

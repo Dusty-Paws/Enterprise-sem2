@@ -1,0 +1,17 @@
+{
+ "name": "5010_CEM - Enterprise Project",
+ "children": [
+  {
+   "title": "Page 1",
+   "id": "ece6c6c5-3890-6aec-e81a-1f23b2939501",
+   "pageId": "ece6c6c5-3890-6aec-e81a-1f23b2939501",
+   "type": "page"
+  },
+  {
+   "title": "Page 2",
+   "id": "f16762ea-a634-6f5b-edbc-7b1a75a7876e",
+   "pageId": "f16762ea-a634-6f5b-edbc-7b1a75a7876e",
+   "type": "page"
+  }
+ ]
+}

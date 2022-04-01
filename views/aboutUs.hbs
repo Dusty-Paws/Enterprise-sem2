@@ -1,0 +1,88 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>About Us Page</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body id="top">
+		<header>
+			<h1>About Us</h1>
+		<ul>
+			<li><button>About You</button>
+			<ul>
+				<li><a href="/customerProfile">Your Profile </a></li>
+				<li><a href="/aboutUs">About Us </a> </li>
+				<li>
+				<strong>
+				{{#if authorised}}
+						<a href="/logout">Log out</a>
+				{{else}}
+						<a href="/login">Log in</a>
+				{{/if}}
+				</strong>
+					</li>
+				</ul>
+			</li>
+		</ul>
+				<a href="/home">Home</a>
+				<a href="/blog">Community</a>
+				<a href="/store">Store</a>
+				<a href="/adoption">Adoption</a>
+				<a href="/Search">Search</a>
+		</header>
+		
+	<main>
+			<h1>Who we are!</h1>
+			<h2> 1.1 About Us </h2>
+			<p> Dusty Paws is a small start-up created by five aspiring studnets who want to make a change in the world, one paw at a time! </p>
+
+			<h2> 1.2 Our Mission </h2>
+			<p>We want to simplify the method of owning a pet and caring for the pet by making thr whole process available on one site! Who wouldn't love being able to make a new best firend, as well as being prepared to introduce them to their new home. </p>
+
+			<h2> 1.3 Our Vision </h2>
+			<p>5 years from now, Dusty Paws aims to be able to supply pet essentials for all species, from cat litter to snake food.  </p>
+
+			<h1>Policies</h1>
+			<h2> 2.1 Privacy </h2>
+			<p>Dusty paws respects your privacy does not intend to betray your trust, just like how you should never betray an animal! Any personal data that is gathered, will stay within the pack and would never make its way to any outsiders.We promise to use any personal data responsibly and take great care when handling it. </p>
+
+			<h2> 2.2 How we collect your data <strong>(Cookies)</strong> </h2>
+			<p>We collect essential data such as you username, to ensure that only authorised users can have access to being able to reserve a pet, create a blog, or purchase any items. This collected when a user is logged in. </p>
+
+			<h2> 2.3 Who's data we collect </h2>
+			<p>Anyone who registered an account with Dusty Paws, will automatically be accepting cookies used to optimise their experience on the site.</p>
+
+			<h2> 2.4 UK Data Protection Act 2018 <strong>(GDPR 2018)</strong> </h2>
+			<p>The data taken from your time on Dusty Paws, will NEVER be used in vain nor will it be used to put you and your new friend in harms way. For more information about GDPR 2018, go to <a href="https://www.gov.uk/government/publications/guide-to-the-general-data-protection-regulation">Guide to the General Data Protection Regulation</a> </p>
+
+			<h2> 2.5 Freedom of Information Act 2000</h2>
+			<p>Every user with a registered account with Dusty Paws has a right to access their personal information and alter it if through the <a href="/customerProfile">Customer Profile</a>. For more information, go to <a href="https://www.gov.uk/make-a-freedom-of-information-request">How to make a freedom of information (FOI) request</a>.</p>
+
+			
+
+	</main>
+
+	<footer>
+        <label>Menu</label>
+		<ol>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/adoption">Adoption</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/aboutUs">About Us </a></li>
+			<li><a href="/contact">Contact Us</a></li>
+        </ol>
+	   <a href = "#top">Back to the top</a>  
+
+	   <p>@Copyright 2021 - Group 1A</p>   
+	</footer>
+	
+	</body>
+</html>
+

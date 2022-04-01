@@ -1,0 +1,162 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+		<title>Adoption Page</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="css/styleAdoption.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body id="top">
+		<header>
+			<h1>Adoption</h1>
+			<ul>
+			<li><button>About You</button>
+			<ul>
+				<li><a href="/customerProfile">Your Profile </a></li>
+				<li><a href="/aboutUs">About Us </a> </li>
+				<li>
+				<strong>
+				{{#if authorised}}
+						<a href="/logout">Log out</a>
+				{{else}}
+						<a href="/login">Log in</a>
+				{{/if}}
+				</strong>
+					</li>
+				</ul>
+			</li>
+		</ul>
+				<a href="/home">Home</a>
+				<a href="/blog">Community</a>
+				<a href="/store">Store</a>
+				{{!-- <a href="/adoption">Adoption</a> --}}
+				<a href="/Search">Search</a>
+		</header>
+	<main>
+		<fieldset>
+		<form action="/adoption" method="post">
+		<legend>Rehome Your Pet</legend>
+			<p>
+				<label for="Pet_Name">Name of Pet You Wish to Adopt</label><br />
+				<input type="text" name="Pet_name" placeholder="Enter Pet Name" required>
+			</p>
+			<p>
+				<label for="Pet_species">Pet Species</label><br />
+				<select name="Species" id="Pet_Species">required>
+					<option value="" disabled selected> Choose your pet's species</option>
+					<option value="dog"> Dog </option>
+					<option value="cat"> Cat </option>
+					<option value="bird"> Bird </option>
+				</select>
+			</p>
+
+			<p>
+				<label for="Breed">Pet Breed</label><br />
+				<input type="text" name="Pet_Breed" placeholder="Enter Pet Breed" required>
+			</p>
+			<p>
+				<label for="Sex">Pet Sex</label><br />
+				<input type="text" name="Pet_Sex" placeholder="Enter Pet Sex" required>
+			</p>
+			<p>
+				<label for="Age">Pet D.O.B</label><br />
+				<input type="text" name="Pet_Age" placeholder="Enter Pet Date of Birth" required>
+			</p>
+				<p>
+				<label for="Pet Fee">Pet Fee</label><br />
+				<input type="number" name="Pet_Fee" placeholder="Enter Pet Fee" required>
+			</p>
+
+			<p><input type="submit" value="submit"></p>
+		</form>
+		</fieldset>
+
+	<!--	<form action="/SpecieSearch" method="post">
+			<label>Pet Type Search <input type="text" name="pet" list="Pets" placeholder="Search..."/></label>
+			<datalist id="Pets">
+			<option value="Cat">
+			<option value="Dog">
+			<option value="Bird">
+		  </datalist> 
+			<p><input type="submit" value="search"></p>
+		</form>-->
+
+    <!--
+    <figure>
+			<img src="img_cat.png">
+			<h4>Cheshire</h4>
+			<p> Domestic Short Hair <p>
+		</figure>
+    <figure>
+			<img src="img_cat.png">
+			<h4>Cheshire</h4>
+			<p> Domestic Short Hair <p>
+		</figure>
+    <figure>
+			<img src="img_cat.png">
+			<h4>Cheshire</h4>
+			<p> Domestic Short Hair <p>
+		</figure> 
+    <figure>
+			
+			<h4>Cheshire</h4>
+			<p> Domestic Short Hair <p>
+		</figure>
+-->
+	{{#each animals}}
+        
+        <figure>
+            <img src={{Pet_Pic}}>
+			<h4>{{Breed}}</h4>  
+			<h3>{{Pet_Name}}</h3>
+      <h5>{{Status_Pet}}</h5>
+
+			<!--Change the link to what the route id would be -->
+			<!--Changed ID to Pet_ID, if you run the server and click on the href link, look at the search bar, it seems to be working! just not displaying the page. Im assuming we need to add routes for it - Dorna -->
+			<!--<a href="/article_details/{{Pet_ID}}">For More Details</a> -->
+			<a href="/article_details/{{Pet_ID}}">For More Details</a> 
+			
+        </figure>
+        
+        {{/each}}
+	<figure> 
+			<img src="img_rabbit.png">
+			<h4>Lop Eared</h4>  
+			<h3>Peaches</h3>
+      <h5>Available</h5>
+      <a href="/article_details">For More Details</a>
+		</figure>
+		
+    <figure>
+			<img src="img_corgi.png" style="height:20%">
+			<h4>Corgi</h4>  
+			<h3>Atticus</h3>
+      <h5>Available</h5>
+      <a href="/article_details">For More Details</a>      
+		</figure>
+		{{!-- {{#if authorised}}
+			<p><a href="/foo">Foo Bar</a></p>
+		{{/if}} --}}
+	</main>
+	
+	<footer>
+        <label>Menu</label>
+		<ol>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/adoption">Adoption</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/aboutUs">About Us </a></li>
+			<li><a href="/contact">Contact Us</a></li>
+        </ol>
+	   <a href = "#top">Back to the top</a>  
+
+	   <p>@Copyright 2021 - Group 1A</p>   
+	</footer>
+
+	</body>
+</html>

@@ -1,0 +1,149 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="css/styleHome.css" type="text/css" rel="stylesheet" />	
+		<script type="module" src="/main.js"></script>
+    <script type="module" src="/slideshow.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<header>
+			<h1>Home</h1>
+			<ul>
+			<li><button>About You</button>
+			<ul>
+				<li><a href="/customerProfile">Your Profile </a></li>
+				<li><a href="/aboutUs">About Us </a> </li>
+				<li>
+				<strong>
+				{{#if authorised}}
+						<a href="/logout">Log out</a>
+				{{else}}
+						<a href="/login">Log in</a>
+				{{/if}}
+				</strong>
+					</li>
+				</ul>
+			</li>
+		</ul>
+				<a href="/home">Home</a>
+				<a href="/blog">Community</a>
+				<a href="/store">Store</a>
+				<a href="/adoption">Adoption</a>
+				<a href="/Search">Search</a>
+		</header>
+
+	<main>
+		
+		
+		<h1> 
+			<a href="/adoption">
+			<strong> HOW IT WORKS </strong> 
+			</a>
+		</h1>
+	
+		<figure> 
+			<img src= "pickUp3.png" width= "200" height= "200" alt="Choose and Reserve">
+			<figcaption><h4>Choose and Reserve your new best friend</h4></figcaption>
+		</figure>
+
+		<figure>
+			 <img src= "rehome.png" width= "200" height= "200" alt="Collect and officially adopt">
+			 <figcaption><h4>Collect your new pet and bring them to their forever home</h4></figcaption>
+		</figure>
+		<hr/>
+
+		 
+		<h1> 
+			<a href="/store">
+			<strong> Offers </strong> 
+			</a>
+		</h1> 
+
+
+<section class="slideshow">
+
+<figure class="imgsliders" style="max-width:800px">
+  
+  <a href="/store"><img class="Slides" id="img1" src="Offer1.png" width="700" length="600"></a>
+  <a href="/store"><img class="Slides" id="img2" src="Offer2.png" width="700" length="600"></a>
+  <a href="/store"><img class="Slides" id="img3" src="Offer3.png" width="700" length="600"></a>
+  </a>
+</figure>
+</section>
+
+ {{!-- dont delete the commenting underneath --}}
+{{!-- <script>
+showSlides(1);
+
+function plusSlides(n) {
+  n=n+1;
+  showSlides(n);
+}
+
+function showSlides(n) {
+  var i;
+  var x = document.getElementsByClassName("Slides");
+  if (n > x.length) {n = 1}
+
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+  x[n-1].style.display = "block";
+setTimeout(function() {   //calls click event after a certain time
+   plusSlides(n);
+}, 2000);
+
+}
+
+</script> --}}
+
+    	
+  	<h1> <strong> FAQ </strong> </h1>
+
+		<h3> Want to talk the current owner </h3>
+		<p>When you click on a pet, you will have the choice to talk to the current via a chat box</p>
+
+		<h3> Rehome your pet </h3>
+		<p>Head over to our adoption page and fill out our "Rehome your Pet" form</p>
+
+		<h3> Collection </h3>
+		<p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+		{{!
+		{{#if authorised}}
+			{{!<p><a href="/foo">Foo Bar</a></p>
+		{{/if}}
+	
+		{{! BE CAREFUL WHEN UNCOMMENTING - SAJ}}
+
+
+		
+	</main>
+
+	<footer>
+        <label>Menu</label>
+		<ol>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/adoption">Adoption</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/aboutUs">About Us </a></li>
+			<li><a href="/contact">Contact Us</a></li>
+        </ol>
+	   <a href = "#top">Back to the top</a>
+
+	   <p>@Copyright 2021 - Group 1A</p>
+	   
+	     
+	</footer>
+
+	</body>
+</html>

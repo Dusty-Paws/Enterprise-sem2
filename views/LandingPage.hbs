@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dusty Paws</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="css/styleLanding.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+
+ 	<!--<style> 
+       /* body {
+        background-image: url("landing_image.jpeg");
+        background-color: #white;
+        background-repeat: no-repeat;
+        background-size: cover;
+		width: 100;	
+		height: 110;				
+        }
+        </style> */ -->
+		
+    <header>
+			<h1>Dusty Paws</h1>
+			<img src="pawlogo.png" size = height>
+			<ul>
+				<li><button>About You</button>
+					<ul>
+						<li><a href="/customerProfile">Your Profile </a></li>
+						<li><a href="/aboutUs">About Us </a> </li>
+						<li>
+						<strong>
+					{{#if authorised}}
+						<a href="/logout">Log out</a>
+					{{else}}
+						<a href="/login">Log in</a>
+					{{/if}}
+						</strong>
+						</li>
+					</ul>
+				</li>
+			</ul>
+				<a href="/home">Home</a>
+				<a href="/blog">Community</a>
+				<a href="/store">Store</a>
+				<a href="/adoption">Adoption</a>
+				<a href="/Search">Search</a>
+	</header>
+
+	<body>
+		
+	<main>		
+        
+
+        <article>
+			
+	    <h2>Welcome to Dusty Paws</h2>
+          
+		<p>A place to provide a safe home for pets everywhere and top up on pet supplies.</p>
+        <p> There is more information throughout the pages </p>
+		 
+        <a href="/home"><input type="submit" value="Get started"/></a>
+		
+        </article>
+
+        <img src="img_landing.jpg">
+
+	</main>
+
+    
+
+	
+
+	</body>
+    
+  	<!--
+      <figure>
+          <img>
+          <figcaption>My pet food is great, it gives me enough energy to annoy my mum. </figcaption>
+      </figure>
+
+	<fieldset> 
+		<p> </>
+	</fieldset> -->
+
+	<footer>
+	   <p>@Copyright 2021 - Dusty Paws</p>
+	</footer>
+</html>

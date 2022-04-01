@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dusty Paws</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link href="css/styleLanding.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+
+		
+    <header>
+			<h1>Dusty Paws</h1>
+			<img src="pawlogo.png" size = height>
+			
+			<ul>
+			<li><button>About You</button>
+			<ul>
+				<li><a href="/customerProfile">Your Profile </a></li>
+				<li><a href="/aboutUs">About Us </a> </li>
+				<li>
+				<strong>
+				{{#if authorised}}
+						<a href="/logout">Log out</a>
+				{{else}}
+						<a href="/login">Log in</a>
+				{{/if}}
+				</strong>
+					</li>
+				</ul>
+			</li>
+		</ul>
+				<a href="/home">Home</a>
+				<a href="/blog">Community</a>
+				<a href="/store">Store</a>
+				<a href="/adoption">Adoption</a>
+				<a href="/Search">Search</a>
+				
+	</header>
+
+	<body>
+		
+	<main>		
+        
+
+        <article>
+			
+	    <h2>confirmation</h2>
+          
+
+	</main>
+
+    
+
+	
+
+	</body>
+    
+  
+	<footer>
+	   <p>@Copyright 2021 - Dusty Paws</p>
+	</footer>
+</html>

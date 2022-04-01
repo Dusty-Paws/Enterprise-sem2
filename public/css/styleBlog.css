@@ -1,0 +1,579 @@
+/************************* Fonts *************************/
+
+@font-face {
+  font-family: "Happy Monkey";
+  src: url(HappyMonkey-Regular.ttf);
+}
+
+
+body {
+		font-family: Happy Monkey;
+		margin: 0;
+		
+	}
+
+/* formats the red message boxes */
+aside {
+	max-width: 500px;
+	margin: auto;
+	background-color: yellow;
+}
+.msg {
+	border: 1px solid red;
+	font-weight: bold;
+	background-color: white;
+	color: red;
+	padding: 1em;
+	margin: 2em;
+	position: fixed;
+	top: 2em;
+}
+/* ====================================================== HEADER ============================================== */
+header {
+	font-family: Happy Monkey;
+	background-color: #E4D4C8; /*sand-dollar*/ 
+	border-bottom: 5px solid #E4D4C8;
+	height: 10vw;
+	position: sticky;
+  overflow: hidden;
+}
+
+header > h1{
+	font-size: 5vw;
+	position: sticky;
+  text-align: center;
+  //justify-content: center;
+  display:inline;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	color: black;
+}
+
+header > h1 > a {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 20px;
+}
+
+h1 {
+	padding: 1vw;
+	float: left;
+	font-size: 3vw;
+	margin-left: 6vw;
+  font-weight: bold;
+}
+
+h2 {
+	font-size: 2.5vw;
+	margin: 1vw;
+	margin-left: 0.6vw;
+}
+
+h3 {
+	font-size: 2vw;
+	margin: 1vw;
+	margin-left: 0.6vw;
+}
+
+header > a {
+	margin-top: 2em;
+	margin-right: 0.5em;
+	float: right;
+	font-size: 1em;
+	padding: 0;
+}
+
+
+/* ====================================================== DROP DOWN ============================================== */
+li > button {
+	border-colour: none;
+  border-radius: 0.5em;
+	width: 10vw;
+	height: 3vw;
+  font-size: 1em;
+	font-family: Happy Monkey;
+	color: white;
+	background-color: #523A28;
+  margin-top: 1.7vw;
+	padding: 0;
+}
+
+button > a {
+  color: white;
+  text-decoration: none;
+	padding: 0;
+}
+
+li > a {
+  color: #523A28;
+}
+
+ul {
+	list-style-type: none;
+	float: right;
+	font-family: Happy Monkey;
+  margin-right: 2vw;
+	padding: 0;
+}
+
+li {
+  text-decoration: none;
+	display: block;
+	transition: all 0.5s ease;
+}
+
+li:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  display: none;
+	margin-left: 1vw;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+p, legend {
+	font-size: 1.5vw;
+}
+
+main {
+	max-width: 90%;
+	margin: auto;
+	margin-top: 2em;
+	padding: 2em;
+	background-color: #D0B49F; /*tan*/
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+  text-align: justify;
+  object-fit: cover;
+  border-radius: 1em;
+  overflow: hidden;
+
+ 
+	/*#white*/
+}
+
+main > figure {
+  margin: 1em;
+  padding: 0;
+  object-fit: cover;
+  border-radius: 1em;
+  
+  
+}
+
+main > img {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+/*FONT COLOUR = #3D2200*/ 
+/*FONT COLOUR = #291600*/
+
+article {
+	width: 50vw;
+	/* background-color: grey;
+	float: left; */
+}
+
+aside {
+	/* background-color: yellow;
+	float: right; */
+	width: 50vw;
+}
+
+main a {
+	color: black;
+	text-decoration: underline;
+}
+
+main a:hover {
+	color: red;
+	text-decoration: none;
+}
+
+section {
+	background-color: #DDD;
+	width: 24vw;
+	margin-top: 1vw;
+	padding: 1vw;
+	border-radius: 1vw;
+}
+
+section > p {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0.5vw;
+}
+
+section > h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.8vw;
+}
+
+small {
+	display: block;
+	text-align: right;
+}
+
+/* ===== FORMS ===== */
+
+fieldset {
+	position: relative;
+	width: 25vw;
+	border: 1px solid #CCC;
+	//padding-top: 4vw;
+	
+	border-width: medium;
+	border-color:#523A28;
+	background-color: #F2EDEA;
+
+	text-align:left ;
+}
+
+legend {
+	position:absolute;
+    top:0;
+	left:0;
+	width: 26.8vw;
+	background-color: #E4D4C8;
+	border-bottom: 5px solid;
+	border-bottom-color: #523A28;
+	padding: 0.6vw;
+	text-align: center;
+}
+
+input, textarea {
+	box-sizing: border-box;
+}
+
+input:focus {
+	outline:none;
+}
+
+/* input[type="file"] {
+	display: none;
+} */
+
+input[type="submit"], label[for="avatar"], .button, header > a, body > a, .custom-file-upload {
+  background-color: #523A28; /*carafe*/
+  border: 2px solid #523A28;
+  color: white;
+  padding: 0.4vw 0.8vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5vw;
+  overflow: hidden;
+  box-shadow: 3px 3px 22px -7px;
+  border-radius: 0.6vw;
+	/* border-radius: 0.6vw; */
+}
+
+input[type="submit"]:hover, label[for="avatar"]:hover, header > a:hover, .custom-file-upload:hover, .add:hover {
+  color: black;
+  background-color: white;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea, select {
+	font-size: 1.5vw;
+	width: 25vw;
+	border: 1px solid #CCC;
+	padding: 0.5vw;
+	/* margin-bottom: 1vw; */
+	/* border-radius: 0.6vw; */
+}
+
+input[type="number"], input[type="Pet_Age"], input[type="Pet_Fee"], textarea, select {
+	font-size: 1.5vw;
+	width: 25vw;
+	border: 1px solid #CCC;
+	padding: 0.5vw;
+	/* margin-bottom: 1vw; */
+	/* border-radius: 0.6vw; */
+}
+
+label[id="Pet_Species"] {
+	font-size: 1.5vw;
+	width: 25vw;
+	border: 1px solid #CCC;
+	padding: 0.5vw;
+	/* margin-bottom: 1vw; */
+	/* border-radius: 0.6vw; */
+}
+
+textarea {
+	height: 10vw;
+	resize: none;
+}
+
+input:required, textarea:required {
+	border-width: 2px;
+}
+
+input:invalid, textarea:invalid {
+	border-color: red;
+}
+input:valid, textarea:valid {
+	border-color: #523A28;
+}
+
+
+select {
+	width: 26.3vw;
+	-webkit-border-radius: 0px;
+}
+
+form > br {
+	line-height: 3vw;
+}
+
+
+
+dl {
+  width: 35vw;
+  overflow: hidden;
+  /* background: #ff0; */
+  padding: 0;
+	margin: 0;
+	font-size: 1.5vw;
+}
+dt {
+  float: left;
+  width: 10.5vw;
+  /* adjust the width; make sure the total of both is 100% */
+  /* background: #cc0; */
+  padding: 0.5vw;
+  margin: 0
+}
+dd {
+  float: left;
+  width: 21vw;
+  /* adjust the width; make sure the total of both is 100% */
+	/* background: #dd0; */
+	padding: 0.5vw;
+  margin: 0
+}
+
+/* ===== TABLES ===== */
+
+table {
+	border-collapse: collapse;
+	margin: auto;
+}
+
+table img {
+	width: 100px;
+}
+
+tr:nth-child(odd) {
+	background: #DDD;
+}
+
+td, th {
+	/* border: 1px solid grey; */
+	padding: 0.5vw;
+	font-size: 1.5vw;
+	text-align: left;
+}
+
+td:last-child, th:last-child {
+	text-align: right;
+}
+
+/* ===== ADD BUTTON ===== */
+
+button#add {
+	display: block;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	z-index: 5;
+	background-color: grey;
+	color: white;
+	font-size: 5em;
+	width: 1.2em;
+	block-size: border-box;
+	border-radius: 2em;
+	border: none;
+	cursor: pointer;
+}
+
+.add {
+	display: block;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	z-index: 5;
+	padding: 1em;
+}
+
+
+input[type="file"] {
+	display: none;
+}
+
+form img {
+	position: relative;
+	top: 1.5em;
+	left: 1em;
+	height: 50px;
+}
+
+footer > ol {
+  list-style-type: none;
+}
+
+footer {
+	background-color: #E4D4C8;
+	margin: 1.5em;
+}
+
+/********************** States *******************/
+
+button#add:hover {
+	background-color: white;
+	color: grey;
+}
+
+/*main > p > img {
+	background-image: url("landing_image.jpeg");
+}*/
+
+body {
+  /*background-image: url("bg1.jpg"); - pic does not exist */
+  background-color: #white;
+}
+
+/* ===== Cards ===== */
+figure {
+  margin: 100px;
+  border: 100px;
+  padding: 0;
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 3px 3px 18px -7px rgba(90,40,0,4);
+  
+}
+
+figure:hover {
+  border-radius: 1em;
+  box-shadow: 0 4px 22px -2px rgba(90,40,0,4);
+  transition: 0.8s;
+}
+
+figcaption {
+	text-align: center;
+  
+}
+
+img {
+  width: 100%;
+  height:400px;
+  object-fit: contain;
+}
+
+form {
+	display:none;
+	position:absolute;
+	top : 190px;//20%;//40px;
+	right : 5%;
+}
+
+/*p:hover + form {
+	display: block;
+  color: red;
+}*/
+
+/*fieldset > input[type="submit"] {
+		//text-align: center;
+		width:100%;
+}*/
+
+button {
+	position:absolute;
+	top : 150px;//20%;//40px;
+	right : 5%;
+}
+
+article {
+  text-decoration:none;
+  color:#000;
+  background:#E4D4C8;//#ffc;
+  height:100%;
+  padding:1em;
+  padding-bottom:0;
+  margin-top:3em;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  transform: rotate(-6deg);
+  transition: transform .15s linear;
+  text-align:center;
+  
+}
+
+article:hover,article:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  transform: scale(1);
+  position:relative;
+  z-index:5;
+}
+
+
+
+/*figure   {
+ //height:100%;
+  margin-left:0;
+  //margin-right: auto;
+  //display: block;
+  //width:20%;
+  margin:0;
+  //justify-content:center;
+  
+ 
+}*/
+
+/*article > figure > img  {
+ //display:block;
+ margin-left: auto;
+  margin-right: auto;
+ width:20%//100px;
+ height:30%//200px;
+}*/
+
+article > p {
+  text-align:center ;
+  max-width:100%;
+  overflow:auto;
+}
+
+article > h3 {
+  max-width:100%;
+}
+
+article > h4 {
+  width:100%;
+}

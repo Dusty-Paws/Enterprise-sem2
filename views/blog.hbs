@@ -1,0 +1,105 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Community</title>
+		<link rel='shortcut icon' type='image/x-icon' href="/icon.ico" />
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.0/showdown.min.js"></script>
+    <script type="module" src="./modules/md2html.js" defer></script>
+    <script type="text/javascript" src="/form_appearance.js"></script>
+    
+		<link href="css/styleBlog.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+    
+	</head>
+	<body id="top">
+		<header>
+			<h1>Community</h1>
+			{{!-- <ul>
+			<li><button>About You</button>
+			<ul>
+				<li><a href="/customerProfile">Your Profile </a></li>
+				<li><a href="/aboutUs">About Us </a> </li>
+				<li>
+				<strong>
+				{{#if authorised}}
+						<a href="/logout">Log out</a>
+				{{else}}
+						<a href="/login">Log in</a>
+				{{/if}}
+				</strong>
+					</li>
+				</ul>
+			</li>
+		</ul> --}}
+				<a href="/home">Home</a>
+				{{!-- <a href="/blog">Community</a> --}}
+				<a href="/store">Store</a>
+				<a href="/adoption">Adoption</a>
+				<a href="/Search">Search</a>
+		</header>
+	<main>
+
+
+		{{!-- Loops through blog reviews and displays by object names --}}
+    {{#each blogReviewer}}
+    
+        <figure>
+          <img src="uploads/{{Profile_Pic}}">
+          <figcaption>This was written by {{User_Name}} ({{User_ID}}) </figcaption>
+          </figure>
+
+        <article>
+			<h3>{{Blog_Title}}</h3>  
+      <h4> This was uploaded at {{Post_Time}}</h4>
+			<p><embed src="uploads/{{Blog_Desc}}"></p>
+
+		{{!-- empty articles tag was used to add the markdown to html --}}
+        <article1>
+        </article1>
+
+        </article>
+        {{/each}}
+      
+
+			{{!-- The Html for the form on the community page – by Mahima --}}
+
+      {{#if authorised}} 
+			
+      <label><button onclick="addForm();">Add a post</button></label>
+
+      {{/if}} 
+
+    <form method="post" action="/add_review" enctype="multipart/form-data" >
+        <fieldset>
+            <label for="Blog_Title">Blog title<input type="text" name="Blog_Title" placeholder="Enter Blog Title" required/></label>
+            <label for="Blog_Desc">Add Review Here<textarea name="Blog_Desc" rows="50" column="100" placeholder="Add Blog review here, can include Markdown syntax... " required></textarea></label>
+            <label><input type="submit" name="submit" /></label>
+        </fieldset>
+        
+        
+            
+    </form> 
+
+	</main>
+
+	<footer>
+        <label>Menu</label>
+		<ol>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/adoption">Adoption</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/aboutUs">About Us </a></li>
+			<li><a href="/contact">Contact Us</a></li>
+        </ol> 
+	   <a href = "#top">Back to the top</a>  
+
+	   <p>@Copyright 2021 - Group 1A</p>   
+	</footer>
+	
+	</body>
+</html>

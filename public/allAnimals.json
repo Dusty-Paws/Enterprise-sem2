@@ -1,0 +1,40 @@
+
+{"Animals":[
+  {
+    "Pet_ID": 1,
+    "Owner_ID": 4,
+    "Status_Pet": "Reserved",
+    "Pet_Pic": "img_dog.png",
+    "Pet_Name": "Apollo",
+    "Species": "Dog",
+    "Breed": "Golden Retriever",
+    "Sex": "M",
+    "Age": "2010-11-02",
+    "Fee": "50"
+  },
+  {
+    "Pet_ID": 2,
+    "Owner_ID": 5,
+    "Status_Pet": "Sold",
+    "Pet_Pic": "img_bird.png",
+    "Pet_Name": "Midnight",
+    "Species": "Bird",
+    "Breed": "Raven",
+    "Sex": "M",
+    "Age": "2022-01-01",
+    "Fee": "10"
+  },
+  {
+    "Pet_ID": 3,
+    "Owner_ID": 6,
+    "Status_Pet": "Available",
+    "Pet_Pic": "img_cat.png",
+    "Pet_Name": "Cheshire",
+    "Species": "Cat",
+    "Breed": "Domestic short hair",
+    "Sex": "F",
+    "Age": "2021-11-06",
+    "Fee": "20"
+  }
+]
+}

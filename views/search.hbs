@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="./searchFilter.js" defer></script>
+       
+        <title>Search Dusty Paws</title>
+        <link rel="stylesheet" href="./css/search.css" />
+    </head>
+    <header>
+      <h1>Dusty Paws</h1>
+      {{#if authorised}}
+				<a href="/logout">Log out</a>
+			{{else}}
+				<a href="/login">Log in</a>
+			{{/if}}
+      <a href="/home">Home</a>
+    </header>
+    <body>
+
+            <h1>Search For an animal here: </h1>
+            {{!-- search bar: --}}
+              <input type="text" placeholder="Search.." name="searchBar">
+              
+            {{!-- list of animals --}}
+            <ul></ul>
+       
+    </body>
+</html>  
+
